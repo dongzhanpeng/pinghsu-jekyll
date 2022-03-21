@@ -54,23 +54,27 @@ layout: default
     </div>
     {% endif %} -->
 
-    <div class="paper paper-article">
-        <!-- Date No. sign -->
-        <a href="#" title="点击查看日历">
-        <span id="openBtn" class="date-index">
-            No.<span id="postIndex"></span><br>
-                <!--Date YYYY-MM-DD-->
-            {{ page.date | to_string | slice: 0, 10 }}
-        </span>
-        </a>
-        
-        <!--Calendar body-->
-        {% include calendar.html %}
-    
-        <!--Article body-->
-        <article class="typo">
-            {{ content }}
-        </article>
-    </div>     
+    {% include header.html %}
+    <div class="content">
+        <div class="paper paper-before" id="paperBefore"></div>
+        <div class="paper paper-article">
+            <!-- Date No. sign -->
+            <a href="#" title="点击查看日历">
+                <span id="openBtn" class="date-index">
+                    No.<span id="postIndex"></span><br>
+                    <!--Date YYYY-MM-DD-->
+                    {{ page.date | to_string | slice: 0, 10 }}
+                </span>
+            </a>
+
+            <!--Calendar body-->
+            {% include calendar.html %}
+
+            <!--Article body-->
+            <article class="typo">
+                {{ content }}
+            </article>
+        </div>
+    </div>
 
 </div>
