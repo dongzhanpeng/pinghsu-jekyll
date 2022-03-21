@@ -25,7 +25,13 @@
         </ul>
 
         <ul id="calWeek" class="cal-body cal-week">
-            <li>Sun</li><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li><li>Sat</li>
+            <li>Sun</li>
+            <li>Mon</li>
+            <li>Tue</li>
+            <li>Wed</li>
+            <li>Thu</li>
+            <li>Fri</li>
+            <li>Sat</li>
         </ul>
 
         <ul id="cal-day1" class="cal-body cal-body-day">
@@ -88,19 +94,28 @@
 
 <script>
     var urlJSON = {
-    {% for post in site.posts %}
-    "{{ post.url | slice: 1, 10 | replace: '-', '/' | replace: '/0', '/' | strip }}": {
-        url: "{{ site.baseurl }}{{ post.url }}",
-        excerpt: "{{ post.excerpt }}",
-        index: {{ forloop.rindex }}
-    },
-    {% endfor %}
-    "end": "end"
+
+        "2019/8/6": {
+            url: "/jekyll-theme-diary/2019/08/06/sorores-dicta",
+            excerpt: "",
+            index: 3
+        },
+
+        "2019/8/5": {
+            url: "/jekyll-theme-diary/2019/08/05/about",
+            excerpt: "",
+            index: 2
+        },
+
+        "2018/12/11": {
+            url: "/jekyll-theme-diary/2018/12/11/nos-tulit-videt",
+            excerpt: "",
+            index: 1
+        },
+
+        "end": "end"
     };
-    {% if page.date %}
-    var activeArticle = "{{ page.date | slice: 0, 10 | replace: '-', '/' | replace: '/0', '/' }}";
-    {% else %}
+
     var activeArticle = new Date().toLocaleDateString();
-    {% endif %}
 </script>
-<script type="text/javascript" src="{{ "/assets/js/calendar.js" | prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{ " /assets/js/calendar.js" | prepend: site.baseurl }}"></script>
