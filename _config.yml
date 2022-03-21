@@ -1,11 +1,11 @@
-name: 
-author: 
-url: 
-baseurl: 
-resume_site: 
-description: 
-github_username: 
-github: 
+name: Fly Blog
+author: Fly
+url: http://www.dongzhanpeng.com
+baseurl: "/fly"
+github: https://github.com/dongzhanpeng/
+resume_site: http://www.dongzhanpeng.com/Resume.io/
+description: 学海无涯，吾辈自强，无远弗届，贵在坚持
+github_username: dongzhanpeng
 plugins: [jekyll-paginate]
 permalink: /:year-:month-:day-:title
 paginate: 12
@@ -20,3 +20,5 @@ comments :
     repo : 
     owner : 
     admin : 
+cxyurl: http://www.cxy521.com/
+cdnurl: https://www.24kdh.com/
