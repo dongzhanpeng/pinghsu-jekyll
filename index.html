@@ -3,7 +3,7 @@ layout: default
 ---
 
 <div class="main-content index-page clearfix">
-    <div class="post-lists">
+    <!-- <div class="post-lists">
         <div class="post-lists-body">
             {% for post in paginator.posts %}
             <div class="post-list-item">
@@ -52,6 +52,25 @@ layout: default
             {% endif %}
         </ol>
     </div>
-    {% endif %}
+    {% endif %} -->
+
+    <div class="paper paper-article">
+        <!-- Date No. sign -->
+        <a href="#" title="点击查看日历">
+        <span id="openBtn" class="date-index">
+            No.<span id="postIndex"></span><br>
+                <!--Date YYYY-MM-DD-->
+            {{ page.date | to_string | slice: 0, 10 }}
+        </span>
+        </a>
+        
+        <!--Calendar body-->
+        {% include calendar.html %}
+    
+        <!--Article body-->
+        <article class="typo">
+            {{ content }}
+        </article>
+    </div>     
 
 </div>
